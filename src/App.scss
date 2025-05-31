@@ -1,42 +1,79 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.header {
+  width: 100%;
+  padding-inline: 20px;
+  background-color: white;
+  border-bottom: 1px solid #8080803b;
+  h3 {
+    margin: 0;
   }
-  to {
-    transform: rotate(360deg);
+  .weightLabel {
+    font-weight: 500;
+  }
+  .weightValue {
+    font-weight: 500;
+  }
+  .addBtn {
+    &:hover, &:focus, &:active {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  .saveBtn {
+    border: none;
+    border-radius: 120px;
+    height: 40px;
+    font-weight: 500;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.contentSection {
+  width: 100%;
+  .deleteBtn {
+    margin-left: 20px;
+  }
+  .formItem {
+    width: 30vw;
+  }
+  .subFormLabel {
+    margin-top: 5px;
+    margin-right: 50px;
+  }
+  .subFormItem {
+    .formItem {
+      width: 29vw;
+      margin-bottom: 10px;
+    }
+    .subItemNumber {
+      margin-bottom: 10px;
+    }
+    .deleteBtn {
+      margin: 8px 0 0 20px;
+    }
+    .addMoreBtn {
+      width: fit-content;
+      align-self: flex-end;
+      height: fit-content;
+      margin-right: 30px;
+      &:hover, &:focus, &:active {
+        background: none;
+        outline: none;
+        border: none;
+      }
+    }
   }
 }
 
-.card {
-  padding: 2em;
+.green {
+  color: green;
 }
 
-.read-the-docs {
-  color: #888;
+.red {
+  color: red;
 }
