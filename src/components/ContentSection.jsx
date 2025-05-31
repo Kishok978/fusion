@@ -19,15 +19,6 @@ const ContentSection = () => {
     const [form] = Form.useForm();
     const dispatch = useDispatch();
     const formValue = useSelector(state => state.checklist.formValue);
-    const [items, setItems] = useState([]);
-    const handleFieldChange = (changeField) => {
-        const name = changeField.name;
-        const value = changeField.value;
-        const updateItem = [...form.getFieldsValue()['items']];
-        // console.log({ changeField },  form.getFieldsValue(),  updateItem, name)
-        // form.setFieldValue('w')
-        // return 10
-    }
 
     useEffect(() => {
         const updateItem = formValue.items
@@ -60,7 +51,6 @@ const ContentSection = () => {
             initialValues={{ ...formValue }}
             className="contentSection"
             onValuesChange={(_, allFields) => dispatch(checklistActions.setFormValue(allFields)) }
-            onFieldsChange={handleFieldChange}
         >
             <Form.List name="items">
                 {(fields, { add, remove }) => (
